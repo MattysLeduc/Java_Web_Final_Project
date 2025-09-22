@@ -1,0 +1,78 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #818181;
+    padding-top: 20px;
+    padding-bottom: 20px; /* Optional: Add a background color to contrast images */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-item {
+    
+    flex: 0 0 100%; /* Each item takes up 100% of the carousel width */
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 500px; /* Set the width to make the images smaller */
+    height: 600px; /* Maintain the aspect ratio */
+    margin: 0 auto; /* Center the image */
+  }
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7); /* Darken for better visibility */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px; /* Increase padding for larger buttons */
+    border-radius: 50%; /* Circular button */
+    z-index: 10;
+    opacity: 0.8; /* Slightly transparent */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control:hover {
+    opacity: 1; /* Fully opaque on hover */
+    transform: translateY(-50%) scale(1.1); /* Slight zoom on hover */
+}
+
+.carousel-control.prev {
+    left: 15px; /* Ensure spacing from the edge */
+}
+
+.carousel-control.next {
+    right: 15px; /* Ensure spacing from the edge */
+}
+
+.carousel-control:focus {
+    outline: none; /* Remove focus outline */
+}
+
+.carousel-control span {
+    font-size: 1.5rem; /* Adjust arrow size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: whithe; /* Light grey background */
+  border: none; /* Remove any borders */
+  padding: 10px; /* Small padding around the arrows */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* White arrows */
+  border-radius: 50%; /* Optional: makes the arrow button circular */
+}

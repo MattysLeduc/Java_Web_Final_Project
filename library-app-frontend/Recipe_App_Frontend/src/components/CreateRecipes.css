@@ -1,0 +1,70 @@
+.recipes-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space items evenly across rows */
+    gap: 20px; /* Space between cards */
+}
+
+.recipe-card {
+    flex: 1 1 calc(25% - 20px); /* Allow 4 cards per row with space between them */
+    max-width: calc(25% - 20px); /* Make sure the card doesn't exceed 25% of the container width */
+}
+
+@media (max-width: 1200px) {
+    .recipe-card {
+        flex: 1 1 calc(33.333% - 20px); /* 3 cards per row on medium screens */
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 800px) {
+    .recipe-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 500px) {
+    .recipe-card {
+        flex: 1 1 100%; /* 1 card per row on small screens */
+        max-width: 100%;
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+}
+
+.modal-dialog {
+    max-width: 500px;
+    margin: 10% auto;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close {
+    font-size: 1 .5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
